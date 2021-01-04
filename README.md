@@ -12,7 +12,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 ### 项目说明 ###
 * 利用github action实现**定时自动调用api**，保持E5开发活跃。
 * **免费，不需要额外设备/服务器**，部署完不用管啦。
-* 加密版，隐藏应用id+机密，保护账号安全。
+* 加密版，隐藏应用id+密钥，保护账号安全。
 
 ### 特别说明/Thanks ###
 * 原教程博主-黑幕（酷安id-Paran）：https://blog.432100.xyz/index.php/archives/50/
@@ -31,7 +31,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 ### 区别 ###
    [普通版（弃用）](https://github.com/wangziyingwen/AutoApi)：密钥暴露，不在乎的话可以使用
    
-   [加密版（推荐）](https://github.com/wangziyingwen/AutoApiSecret)：应用id机密加密隐藏，提高安全性
+   [加密版（推荐）](https://github.com/wangziyingwen/AutoApiSecret)：应用id密钥加密隐藏，提高安全性
 
    [模仿人为应用开发版（半弃用）](https://github.com/wangziyingwen/AutoApiSR)：顾名思义，加密版的升级版。由于超级版兼容模拟版的功能，此版本处于一种尴尬位置。（当然也可以正常使用）
    
@@ -59,13 +59,13 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
    
    >:anguished: :anguished: :anguished: :anguished: :anguished: :anguished:  
   
-* 第一步，先大致浏览[原教程](https://blog.432100.xyz/index.php/archives/50/)，了解如何获取应用id、机密、refresh_token 3样东西，以方便接下来的操作。
+* 第一步，先大致浏览[原教程](https://blog.432100.xyz/index.php/archives/50/)，了解如何获取应用id、密钥、refresh_token 3样东西，以方便接下来的操作。
 
 * 第二步，登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。（看不到图片/图裂请科学上网）
 
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/fork.png)
   
-* 根据[原教程](https://blog.432100.xyz/index.php/archives/50/)获取应用id、机密、refresh_token（自己复制保存，注意区分id机密，别弄混了）
+* 根据[原教程](https://blog.432100.xyz/index.php/archives/50/)获取应用id、密钥、refresh_token（自己复制保存，注意区分id密钥，别弄混了）
    
   然后在线编辑你项目里的1.txt，将整个refresh_token覆盖粘贴进去（里面是我的数据，先删掉或者覆盖掉）。（千万不要改1.py）
   
@@ -75,7 +75,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   
 * 第三步，依次点击上栏Setting > Secrets > Add a new secret，新建两个secret如图：CONFIG_ID、CONFIG_KEY。
 
-  内容分别如下: ( 把你的应用id改成你的应用id , 你的应用机密改成你的机密，单引号不要动 )
+  内容分别如下: ( 把你的应用id改成你的应用id , 你的应用密钥改成你的密钥，单引号不要动 )
   
   CONFIG_ID
   ```shell
@@ -83,7 +83,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   ```
   CONFIG_KEY
   ```shell
-  secret=r'你的应用机密'
+  secret=r'你的应用密钥'
   ```
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/机密.png)
   
